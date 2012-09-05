@@ -1,6 +1,6 @@
 # Toppr [![Build Status](https://secure.travis-ci.org/willrax/toppr.png?branch=master)][travis]
 
-[travis]: http://travis-ci.org/willrax/octokit
+[travis]: http://travis-ci.org/willrax/toppr
 
 A simple ruby wrapper for the desktoppr.co API.
 
