@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.desktoppr.co/1/users/willrax
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.3.3
+      Date:
+      - Tue, 04 Sep 2012 21:04:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '286'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      Etag:
+      - ! '"8839d020839c17f2b5b34e33636eaec8:e6815ed2ad7b178c9fc67a0dc5ab16a7"'
+      Access-Control-Allow-Methods:
+      - POST, GET, PUT, DELETE, OPTIONS
+      Access-Control-Max-Age:
+      - '1000'
+      Cache-Control:
+      - public
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      X-Request-Id:
+      - a52baebd7ba65ee488df370b01423f8d
+      X-Runtime:
+      - '0.036098'
+      X-Content-Digest:
+      - 7c535491fc49db107ad74b83cf12a1f7db8375f1
+      Age:
+      - '0'
+      X-Rack-Cache:
+      - miss, store
+    body:
+      encoding: US-ASCII
+      string: ! '{"response":{"username":"willrax","name":"willrax","avatar_url":"https://secure.gravatar.com/avatar/ce0041fa65236f089e20333b6488d981.png?r=PG","wallpapers_count":221,"uploaded_count":0,"followers_count":2,"following_count":0,"created_at":"2012-06-20T11:57:41Z","lifetime_member":false}}'
+    http_version: 
+  recorded_at: Tue, 04 Sep 2012 21:04:58 GMT
+recorded_with: VCR 2.2.4
