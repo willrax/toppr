@@ -2,29 +2,21 @@ require "toppr/client/user"
 require "toppr/client/wallpaper"
 
 module Toppr
-	class Client
+  class Client
+    include Hashie
+    include HTTParty
 
-	  include Hashie
-	  include HTTParty
+    base_uri 'https://api.desktoppr.co/1'
 
-	  base_uri 'https://api.desktoppr.co/1'
+    def request(action, path, options)
+      parse_response(self.class.send(action, path, options))
+    end
 
-	  # Make the request to the API
-	  #
-	  def request(action, path, options)
-	  	parse_response(self.class.send(action, path, options))
-	  end
-	  
-	  private
+    def parse_response(response)
+      (Hashie::Mash.new(response)).response
+    end
 
-	  # Parse the response
-	  #
-	  def parse_response(response)
-	  	(Hashie::Mash.new(response)).response
-	  end
-
-		include Toppr::Client::User
-	  include Toppr::Client::Wallpaper
-
-	end
+    include Toppr::Client::User
+    include Toppr::Client::Wallpaper
+  end
 end

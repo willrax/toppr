@@ -5,11 +5,11 @@ require "toppr/client"
 require "toppr/version"
 
 module Toppr
-	class << self
+  class << self
 
-	  def new
-	    Toppr::Client.new
-	  end
+    def new
+      Toppr::Client.new
+    end
 
     def method_missing(method, *args, &block)
       return super unless new.respond_to?(method)
@@ -19,6 +19,5 @@ module Toppr
     def respond_to?(method, include_private=false)
       new.respond_to?(method, include_private) || super(method, include_private)
     end
-
-	end
+  end
 end
